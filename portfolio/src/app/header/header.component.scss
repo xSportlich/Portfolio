@@ -1,0 +1,36 @@
+
+
+@mixin dFlex($js:center, $ai:center, $g:0px) {
+    display: flex;
+    justify-content: $js;
+    align-items: $ai;
+    gap: $g;
+}
+
+@mixin vertical() {
+    writing-mode: tb-rl;
+    transform: rotate(180deg);
+}
+
+.header-content {
+    
+    background: #B5E93B;
+    width: 2000px;
+    height: 100vh;
+    @include dFlex($js:center,$ai:center,$g:0px );
+    >.infos{
+        >.text{
+            font-size: 30px;
+        }
+        @include dFlex($js:center,$ai:center,$g:28px );
+        @include vertical();
+    }
+}
+
+path {
+    fill: transparent;
+  }
+  
+  text {
+    fill: #000000;
+  }

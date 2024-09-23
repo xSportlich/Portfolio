@@ -1,0 +1,7 @@
+.div {
+    overflow-y: hidden; /* Verhindert vertikales Scrollen */
+    overflow-x: scroll;   /* Ermöglicht horizontales Scrollen */
+    width: 100vw;       /* Die Breite des Viewports, damit der Inhalt gescrollt wird */
+    height: 100vh;      /* Die Höhe des Viewports */
+    white-space: nowrap; /* Verhindert Zeilenumbruch */
+}

@@ -96,4 +96,5 @@ body {
 .scroll-bar {
   scrollbar-width: thin;
   scrollbar-color: $prime;
+  scroll-behavior: smooth;
 }

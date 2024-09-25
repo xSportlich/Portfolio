@@ -3,6 +3,8 @@ import { StartsiteComponent } from './startsite/startsite.component';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { WhyMeSiteComponent } from './why-me-site/why-me-site.component';
+import { MyskilsComponent } from './myskils/myskils.component';
+import { MyworkComponent } from './mywork/mywork.component';
 
 @Component({
   selector: 'app-maincontant',
@@ -11,7 +13,9 @@ import { WhyMeSiteComponent } from './why-me-site/why-me-site.component';
     StartsiteComponent,
     RouterOutlet,
     CommonModule,
-    WhyMeSiteComponent
+    WhyMeSiteComponent,
+    MyskilsComponent,
+    MyworkComponent
   ],
   templateUrl: './maincontant.component.html',
   styleUrl: './maincontant.component.scss'

@@ -9,6 +9,8 @@
     >.top {
         padding-top: 40px;
         padding-right: 100px;
+        position: fixed;
+        width: 90vw;
         @include dFlex($js:flex-end,$ai:center,$g:10px );
         >.top_bar {
             @include dFlex($js:center,$ai:center,$g:80px );

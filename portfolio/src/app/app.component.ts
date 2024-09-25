@@ -27,9 +27,9 @@ export class AppComponent implements AfterViewInit {
     if (bodyElement) {
       bodyElement.addEventListener("wheel", function (e: WheelEvent) {
         if (e.deltaY > 0) {  
-          bodyElement.scrollLeft  += 100;
+          bodyElement.scrollLeft  += 120;
         } else {
-          bodyElement.scrollLeft  -= 100;
+          bodyElement.scrollLeft  -= 120;
         }
       }, { passive: false });
     }

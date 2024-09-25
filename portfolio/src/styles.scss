@@ -3,46 +3,48 @@
   padding: 0;
 }
 
+$prime: #B5E93B;
+
+
+@mixin dFlex($js:center, $ai:center, $g:0px) {
+  display: flex;
+  justify-content: $js;
+  align-items: $ai;
+  gap: $g;
+}
+
+@mixin vertical() {
+  writing-mode: tb-rl;
+  transform: rotate(180deg);
+}
+
 body {
   margin: 0;
   padding: 0;
-  width: 100vw; /* Sichtbare Breite */
-  height: 100vh; /* Sichtbare Höhe */
-  overflow-x: auto; /* Erlaubt horizontales Scrollen */
-  overflow-y: hidden; /* Verhindert vertikales Scrollen */
-  white-space: nowrap; /* Verhindert Zeilenumbruch */
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
   display: flex;
-  // overflow: hidden;
 }
 
-// app-root {
-//   display: inline-block; /* Verhindert Zeilenumbruch, damit der Inhalt nicht bricht */
-//   width: 4000px; /* Beispielbreite für das Scrollen */
-//   height: 100%; /* Höhe des Bildschirms */
-//   background-color: lightblue; /* Sichtbar für Tests */
-//   // overflow: hidden;
-// }
-
-/* #scroll könnte als innerer Container für Inhalte dienen */
- #scroll {
-  //  width: 4000px;  /* Setze eine große Breite, um horizontales Scrollen zu ermöglichen */
-   height: 100%;   /* Füllt die Höhe des Bildschirms */
-   background-color: lightblue; /* Testweise eine Farbe, um den Container sichtbar zu machen */
-   overflow-x: scroll; /* Ermöglicht horizontales Scrollen */
-   overflow-y: hidden; /* Verhindert vertikales Scrollen */
- }
-
-// .test {
-//   width: 3000px;
-//   background-color: rgb(94, 86, 77);
-//   overflow-y: hidden; /* Verhindert vertikales Scrollen */
-//   overflow-x: scroll;   /* Ermöglicht horizontales Scrollen */       /* Die Breite des Viewports, damit der Inhalt gescrollt wird *//* Die Höhe des Viewports */
-//   white-space: nowrap;
- 
-// }
+.main-content {
+  display: flex;
+}
 
 
+#scroll {
+  height: 106%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
 
+#scroll::-webkit-scrollbar{
+  background-color: black;
+  border-radius: 20px;
+  border: 1px solid;
+  border-color: #B5E93B;
+  color: #B5E93B black;
+}
 /* quantico-regular - latin */
 @font-face {
   font-display: swap;
@@ -89,4 +91,9 @@ body {
 
 .fontQuantico {
   font-family: 'Quantico';
+}
+
+.scroll-bar {
+  scrollbar-width: thin;
+  scrollbar-color: $prime;
 }

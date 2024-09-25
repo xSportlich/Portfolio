@@ -1,0 +1,70 @@
+@import '../../../styles.scss';
+
+.content {
+    // padding-left: 172px;
+    height: 100%;
+    width: 100vw;
+    background-image: linear-gradient(to left, rgb(22, 22, 22) , rgb(0, 0, 0));
+    color: white;
+    >.top {
+        padding-top: 40px;
+        padding-right: 100px;
+        @include dFlex($js:flex-end,$ai:center,$g:10px );
+        >.top_bar {
+            @include dFlex($js:center,$ai:center,$g:80px );
+            >.social-medias {
+                display: flex;
+                gap: 20px;
+            }
+            .langueges {
+                color: white;
+                >a {
+                    text-decoration: none;
+                    color: white;
+                    &:hover {
+                        color: $prime;
+                    }
+                }
+            }
+        }   
+    }
+    >.mid {
+        position: relative;
+        box-sizing: border-box;
+        @include dFlex($js:center,$ai:center,$g:0px );
+        height: 100%;
+        >img {
+            position: absolute;
+            right:50px;
+            top: 300px;
+        }
+    }
+}
+
+.langueges {
+    @include dFlex($js:center,$ai:center,$g:10px );
+}
+
+.space-content {
+    border: 1px solid;
+    border-color: white;
+    height: 15px;
+}
+
+
+.title {
+    position: absolute;
+    >.name {
+        font-size: 100px;
+        font-weight: 700px;
+        color: $prime;
+    }
+    >.subtitle {
+        font-size: 48px;
+        font-weight: 700px;
+        color: rgba(0, 0, 0, 0);
+        -webkit-text-stroke: 1px $prime;
+        display: flex;
+        justify-content: flex-end;
+    }
+}

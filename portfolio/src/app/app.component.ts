@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { MaincontantComponent } from './maincontant/maincontant.component';
 import { delay } from 'rxjs';
 import { HeaderComponent } from './header/header.component';
+import { StartsiteComponent } from './maincontant/startsite/startsite.component';
 
 @Component({
   selector: 'app-root',
@@ -11,8 +12,8 @@ import { HeaderComponent } from './header/header.component';
   imports: [
     CommonModule,
     RouterOutlet,
-    MaincontantComponent,
-    HeaderComponent
+    HeaderComponent,
+    MaincontantComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

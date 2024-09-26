@@ -1,16 +1,19 @@
 @import '../../../styles.scss';
 
 .content {
-    width: 58vw;
+    // width: 65vw;
     height: 104vh;
     background-image: linear-gradient(to right, rgb(22, 22, 22), rgb(12, 12, 12));
     @include dFlex($js: flex-start, $ai: center, $g: 0);
 }
 
 .container {
-    @include dFlex($js: center, $ai: flex-start, $g: 20px);
-    margin-bottom: 190px;
+    @include dFlex($js: center, $ai: center, $g: 20px);
+    margin-bottom: 400px;
     position: relative;
+    height: 100%;
+    width: max-content;
+    margin-left: 50px;
 
     >.why-me-text {
         @include vertical();
@@ -20,9 +23,9 @@
     }
 
     >img {
-        position: absolute;
-        top: 600px;
-        left: 990px;
+        // position: absolute;
+        margin-top: 1015px;
+        margin-left: 80px;
     }
 
     >.infos-content {
@@ -98,9 +101,7 @@
 
 .btn {
     display: flex;
-    justify-content: flex-end;
     margin-top: 360px;
-    margin-left: -80px;
 }
 
 .myButton {

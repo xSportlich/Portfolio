@@ -22,6 +22,6 @@ icons = [
   {'img': '../../../assets/img/git.png', 'text': 'GIT'},
   {'img': '../../../assets/img/scrum.png', 'text': 'Scrum'},
   {'img': '../../../assets/img/Group.png', 'text': 'Material desingn'},
-  {'img': '../../../assets/img/Group 42.png', 'text': 'Challange me'},
+  {'img': '../../../assets/img/Group 42.png', 'text': 'Challenge me'},
 ];
 }

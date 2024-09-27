@@ -5,6 +5,8 @@ import { CommonModule } from '@angular/common';
 import { WhyMeSiteComponent } from './why-me-site/why-me-site.component';
 import { MyskilsComponent } from './myskils/myskils.component';
 import { MyworkComponent } from './mywork/mywork.component';
+import { ReferenceComponent } from './reference/reference.component';
+import { MycontactComponent } from './mycontact/mycontact.component';
 
 @Component({
   selector: 'app-maincontant',
@@ -15,7 +17,9 @@ import { MyworkComponent } from './mywork/mywork.component';
     CommonModule,
     WhyMeSiteComponent,
     MyskilsComponent,
-    MyworkComponent
+    MyworkComponent,
+    ReferenceComponent,
+    MycontactComponent
   ],
   templateUrl: './maincontant.component.html',
   styleUrl: './maincontant.component.scss'

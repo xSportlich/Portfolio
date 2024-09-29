@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+}
 
 $prime: #B5E93B;
 
@@ -36,6 +40,8 @@ body {
   height: 106%;
   overflow-x: scroll;
   overflow-y: hidden;
+  // scroll-behavior: smooth;
+  overscroll-behavior: none;
 }
 
 #scroll::-webkit-scrollbar{
@@ -98,3 +104,27 @@ body {
   scrollbar-color: $prime;
   scroll-behavior: smooth;
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.scroll_smooth {
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translatey(-100%);
+  transition: all 2s;
+  }
+  
+  .show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  }

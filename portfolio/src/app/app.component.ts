@@ -5,6 +5,7 @@ import { MaincontantComponent } from './maincontant/maincontant.component';
 import { delay } from 'rxjs';
 import { HeaderComponent } from './header/header.component';
 import { StartsiteComponent } from './maincontant/startsite/startsite.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ import { StartsiteComponent } from './maincontant/startsite/startsite.component'
     CommonModule,
     RouterOutlet,
     HeaderComponent,
-    MaincontantComponent
+    MaincontantComponent,
+    FooterComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -27,11 +29,13 @@ export class AppComponent implements AfterViewInit {
     if (bodyElement) {
       bodyElement.addEventListener("wheel", function (e: WheelEvent) {
         if (e.deltaY > 0) {  
-          bodyElement.scrollLeft  += 120;
+          bodyElement.scrollLeft  += 520;
         } else {
-          bodyElement.scrollLeft  -= 120;
+          bodyElement.scrollLeft  -= 520;
         }
       }, { passive: false });
     }
   }
+
+  
 }

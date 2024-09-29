@@ -9,6 +9,10 @@ import { Component } from '@angular/core';
 })
 export class ProjectcontantComponent {
 
+  constructor() {
+  }
+
+
   projects = [
     {
       number: 1,

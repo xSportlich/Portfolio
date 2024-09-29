@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { CommentsComponent } from './comments/comments.component';
 
 @Component({
@@ -11,5 +11,5 @@ import { CommentsComponent } from './comments/comments.component';
   styleUrl: './reference.component.scss'
 })
 export class ReferenceComponent {
-
+  
 }

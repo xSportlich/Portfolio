@@ -7,6 +7,7 @@ import { MyskilsComponent } from './myskils/myskils.component';
 import { MyworkComponent } from './mywork/mywork.component';
 import { ReferenceComponent } from './reference/reference.component';
 import { MycontactComponent } from './mycontact/mycontact.component';
+import { LetusworkComponent } from './letuswork/letuswork.component';
 
 @Component({
   selector: 'app-maincontant',
@@ -19,7 +20,8 @@ import { MycontactComponent } from './mycontact/mycontact.component';
     MyskilsComponent,
     MyworkComponent,
     ReferenceComponent,
-    MycontactComponent
+    MycontactComponent,
+    LetusworkComponent
   ],
   templateUrl: './maincontant.component.html',
   styleUrl: './maincontant.component.scss'

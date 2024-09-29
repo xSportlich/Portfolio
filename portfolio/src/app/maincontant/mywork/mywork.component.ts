@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { ProjectcontantComponent } from './projectcontant/projectcontant.component';
 import { CommonModule } from '@angular/common';
 
@@ -12,6 +12,27 @@ import { CommonModule } from '@angular/common';
   templateUrl: './mywork.component.html',
   styleUrl: './mywork.component.scss'
 })
-export class MyworkComponent {
+export class MyworkComponent implements AfterViewInit {
 
+  constructor() {}
+
+  ngAfterViewInit() {
+    this.animationx(); // Call the function here after the view is initialized
+  }
+
+  animationx() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log('show');
+          entry.target.classList.add('show');
+        } else {
+          entry.target.classList.remove('show');
+        }
+      });
+    });
+  
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
+  }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-comments',
@@ -7,7 +7,27 @@ import { Component } from '@angular/core';
   templateUrl: './comments.component.html',
   styleUrl: './comments.component.scss'
 })
-export class CommentsComponent {
+export class CommentsComponent implements AfterViewInit{
+
+  ngAfterViewInit() {
+    this.animationx(); // Call the function here after the view is initialized
+  }
+
+  animationx() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log('show');
+          entry.target.classList.add('show');
+        } else {
+          entry.target.classList.remove('show');
+        }
+      });
+    });
+  
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
+  }
 comments = [
 {
   text: '‘‘Michael is a reliable and friendly person. Work in a structured way and write a clear code. I recommend him as a colleague.’’',

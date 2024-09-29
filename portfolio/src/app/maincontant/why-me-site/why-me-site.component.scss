@@ -22,10 +22,13 @@
         -webkit-text-stroke: 1px #B5E93B;
     }
 
-    >img {
+    >a {
         // position: absolute;
         margin-top: 1015px;
         margin-left: 80px;
+        &:hover {
+            filter: drop-shadow(0px 0px 5px #B5E93B);
+        }
     }
 
     >.infos-content {

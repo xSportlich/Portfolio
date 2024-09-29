@@ -1,16 +1,23 @@
-<div class="container fontQuantico">
+<div id="contact" class="container fontQuantico scroll_smooth">
     <div class="contant">
         <span class="contactme">Contact Me</span>
         <div class="fomular">
-            <form>
-                <!-- <label for="">Name</label> -->
-                <input type="text" id="name" placeholder="Your name...">
+            <form class="form">
 
-                <!-- <label for="">Last</label> -->
-                <input type="email" id="email" placeholder="Your mail...">
+                <input type="text" id="name" placeholder="Your name">
 
-                <!-- <label for="">Subject</label> -->
-                <input type="message" id="message" placeholder="Write somethingt">
+                <input type="email" id="email" placeholder="Your e-mail">
+
+                <textarea type="message" id="message" placeholder="Youre message"></textarea>
+
+                <div class="privacy_policy">
+                    <div class="checkbox-wrapper-40">
+                        <input type="checkbox" />
+                        <span class="checkbox"></span>
+                    </div>
+                    <span class="policy_text">I've raed the <a href="">privacy policy </a>and agree to the processing of my data as outlined.</span>
+                </div>
+                <input class="submit" type="submit" value="Send">
             </form>
         </div>
     </div>

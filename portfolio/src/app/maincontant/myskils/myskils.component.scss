@@ -35,6 +35,9 @@
 .arrow {
     margin-bottom: 300px;
     margin-left: 120px;
+    &:hover {
+        filter: drop-shadow(0px 0px 5px #B5E93B);
+    }
 }
 
 .icons-container {

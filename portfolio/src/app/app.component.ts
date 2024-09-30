@@ -15,7 +15,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     RouterOutlet,
     HeaderComponent,
     MaincontantComponent,
-    FooterComponent
+    FooterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -23,19 +23,32 @@ import { FooterComponent } from './shared/footer/footer.component';
 export class AppComponent implements AfterViewInit {
   title = 'portfolio';
 
+
   ngAfterViewInit(): void {
     const bodyElement = document.getElementById("scroll");
+    let isScrolling: boolean | number = false; // Variable zur Steuerung der Scroll-Animation
 
     if (bodyElement) {
       bodyElement.addEventListener("wheel", function (e: WheelEvent) {
-        if (e.deltaY > 0) {  
-          bodyElement.scrollLeft  += 520;
-        } else {
-          bodyElement.scrollLeft  -= 520;
+        // Verhindert mehrfaches Scrollen während einer laufenden Animation
+        if (isScrolling) {
+          return;
         }
+
+        isScrolling = true;
+
+        if (e.deltaY > 0) {
+          bodyElement.scrollBy({ left: 520, behavior: 'smooth' });
+        } else {
+          bodyElement.scrollBy({ left: -520, behavior: 'smooth' });
+        }
+
+        // Setze isScrolling nach 500ms wieder auf false (nachdem die Animation abgeschlossen ist)
+        setTimeout(() => {
+          isScrolling = false;
+        }, 200);  // Dauer, die zur Vermeidung von Ruckeln reicht
       }, { passive: false });
     }
   }
 
-  
 }

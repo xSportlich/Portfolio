@@ -73,6 +73,8 @@
 }
 
 .Legal_notice {
+    text-decoration: none;
+    color: white;
     &:hover {
         cursor: pointer;
         color: #D3ED97;
@@ -80,6 +82,8 @@
 }
 
 .privacy_policy {
+    text-decoration: none;
+    color: white;
     &:hover {
         cursor: pointer;
         color: #D3ED97;

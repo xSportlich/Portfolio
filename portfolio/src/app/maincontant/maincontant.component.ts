@@ -8,6 +8,7 @@ import { MyworkComponent } from './mywork/mywork.component';
 import { ReferenceComponent } from './reference/reference.component';
 import { MycontactComponent } from './mycontact/mycontact.component';
 import { LetusworkComponent } from './letuswork/letuswork.component';
+import { NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-maincontant',

@@ -95,6 +95,9 @@
     width: 20px;
     height: 20px;
     position: relative;
+    &:hover {
+      cursor: pointer;
+    }
   }
   .checkbox-wrapper-40 input[type=checkbox]:before,
   .checkbox-wrapper-40 input[type=checkbox]:after {
@@ -154,9 +157,27 @@
     font-size: 16px;
     color: #4A4A4A;
     text-shadow: 0px 1px 0px #000000;
+    &:hover {
+      box-shadow: inset 0 -1em 1em rgba(2, 2, 2, 0.233);
+      cursor: pointer;
+    }
   }
 
   .form {
     align-items: flex-end;
+  }
+
+  input[type="submit"]:disabled {
+    background: #ccc;
+    &:hover {
+      cursor:default;
+      box-shadow: none;
+    }
+  }
+
+  .warn_text {
+    color: red;
+    font-size: 14px;
+    margin-right: 250px;
   }
 

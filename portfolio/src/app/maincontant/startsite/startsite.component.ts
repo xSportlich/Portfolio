@@ -5,7 +5,8 @@ import { MaincontantComponent } from '../maincontant.component';
   selector: 'app-startsite',
   standalone: true,
   imports: [
-    MaincontantComponent
+    MaincontantComponent,
+
   ],
   templateUrl: './startsite.component.html',
   styleUrl: './startsite.component.scss'
@@ -21,7 +22,6 @@ export class StartsiteComponent implements AfterViewInit{
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          console.log('show');
           entry.target.classList.add('show');
         } else {
           entry.target.classList.remove('show');
@@ -32,4 +32,5 @@ export class StartsiteComponent implements AfterViewInit{
     const hiddenElements = document.querySelectorAll('.hidden');
     hiddenElements.forEach((el) => observer.observe(el));
   }
+
 }

@@ -1,7 +1,18 @@
 @import '../../../styles.scss';
 
-.container {
+.container_footer {
     background-color: $prime;
     width: 100px;
     height: 100%;
 }
+
+.imprint-footer {
+    left: 0px;
+    height: 200px;
+    width: 100%;
+    bottom: 0px;
+    position: absolute;
+    background-color: $prime;
+    color: white;
+    /* Weitere spezielle Stile nur für die Impressum-Seite */
+  }

@@ -1,18 +1,19 @@
-<!-- <footer id="contact" class="container_footer" [ngClass]="{ 'imprint-footer': isImprintPage }">
-
-  <div *ngIf="!isImprintPage">
+<footer id="contact" class="container_footer" [ngClass]="{ 'imprint-footer': isImprintPage || isPolicyPage }">
+  <!-- Allgemeiner Footer-Inhalt -->
+  <!-- <div *ngIf="!isImprintPage">
     <p>Allgemeiner Footer-Inhalt für andere Seiten</p>
-    <p>Kontaktinformationen: info@example.com</p>
+    <p>Kontaktinformationen: info&#64;example.com</p>
+  </div> -->
+
+  <!-- Inhalt speziell für die Impressum-Seite -->
+  <div class="footer_imprint" *ngIf="isImprintPage || isPolicyPage ">
+   <img src="./assets/img/Eduard_Kammerzel_Logo.png" alt="">
+   <span class="text">Eduard Kammerzel 2024</span>
   </div>
+</footer>
 
 
-  <div *ngIf="isImprintPage">
-    <p>Impressum: Informationen zu unserem Unternehmen.</p>
-    <p>Rechtsform: Beispiel GmbH</p>
-    <p>Sitz der Gesellschaft: Beispielstraße 1, 12345 Beispielstadt</p>
-    <p>Kontakt: info@example.com</p>
-  </div>
-</footer> -->
+
 
 
 

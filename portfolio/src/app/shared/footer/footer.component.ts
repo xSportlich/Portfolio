@@ -1,16 +1,17 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';  // Import von CommonModule
+import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { CommonModule } from '@angular/common'; 
 
 @Component({
   selector: 'app-footer',
-  standalone: true,  // Wenn es eine Standalone-Komponente ist
-  imports: [CommonModule],  // CommonModule importieren, um ngClass zu nutzen
+  standalone: true,
+  imports: [CommonModule], 
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent {
+export class FooterComponent implements OnInit {
   isImprintPage = false;
+  isPolicyPage = false;
 
   constructor(private router: Router) {}
 
@@ -20,6 +21,10 @@ export class FooterComponent {
       if (event instanceof NavigationEnd) {
         this.isImprintPage = event.urlAfterRedirects.includes('/imprint');
       }
+      if (event instanceof NavigationEnd) {
+        this.isPolicyPage = event.urlAfterRedirects.includes('/policy');
+      }
     });
   }
 }
+

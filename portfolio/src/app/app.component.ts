@@ -6,6 +6,7 @@ import { delay } from 'rxjs';
 import { HeaderComponent } from './header/header.component';
 import { StartsiteComponent } from './maincontant/startsite/startsite.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     HeaderComponent,
     MaincontantComponent,
     FooterComponent,
+    HttpClientModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
